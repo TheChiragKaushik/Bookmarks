@@ -75,7 +75,7 @@ const Bookmarks: FC<BookmarksProps> = ({ user }) => {
 
         return () => {
             isMounted = false;
-            supabase.removeChannel(channel);
+            channel.unsubscribe();
         };
     }, [user]);
 
